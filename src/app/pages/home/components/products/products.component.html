@@ -1,0 +1,8 @@
+<div class="wrapper">
+  @for (product of products; track product.id) {
+  <app-product-card
+    [product]="product"
+    (add)="onAdd(product)"
+  ></app-product-card>
+  }
+</div>
