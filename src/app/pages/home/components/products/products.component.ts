@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
-import { PRODUCTS, Product } from '../../../../data/products.data';
+import { PRODUCTS} from '../../../../data/products.data';
 import { ProductCardComponent } from '../product-card/product-card.component';
 import { CartService } from '../../../../services/cart.service';
+import { Products } from '../../../../models/product';
 
 @Component({
   selector: 'app-products',
@@ -15,7 +16,7 @@ export class ProductsComponent {
 
   constructor(private cartService: CartService) {}
 
-  onAdd(product: Product) {
+  onAdd(product: Products) {
     this.cartService.addItem({
       id: product.id,
       name: product.name,

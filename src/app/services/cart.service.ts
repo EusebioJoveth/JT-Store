@@ -1,4 +1,6 @@
 import { Injectable, signal } from '@angular/core';
+import { Cart } from '../models/cart';
+import { CartItem } from '../models/cart-item';
 
 @Injectable({
   providedIn: 'root',
@@ -55,7 +57,7 @@ export class CartService {
   }
 
   removeItem(item: CartItem) {
-    this.cart.update((prevCart) => {
+    this.cart.update((prevCart:Cart) => {
       const newCart = {
         ...prevCart,
         items: [...prevCart.items.filter((t) => t.id !== item.id)],
@@ -66,18 +68,4 @@ export class CartService {
       return newCart;
     });
   }
-}
-
-export interface CartItem {
-  id: string;
-  name: string;
-  imageUrl: string;
-  price: number;
-  quantity: number;
-}
-
-export interface Cart {
-  items: CartItem[];
-  count: number;
-  total: number;
 }

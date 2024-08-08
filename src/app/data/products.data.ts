@@ -1,13 +1,7 @@
-export interface Product {
-  id: string;
-  name: string;
-  description: string;
-  price: number;
-  thumbUrl: string;
-  imageUrl: string;
-}
+import { Products } from "../models/product";
 
-export const PRODUCTS: Product[] = [
+
+export const PRODUCTS: Products[] = [
   {
     id: '8347836c-35db-4307-ac5d-cbdf19a9a50c',
     name: 'Black+Decker Helix Performance Premium Hand Mixer, 5-Speed Mixer, Red, MX600R',

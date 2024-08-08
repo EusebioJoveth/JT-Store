@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { Product } from '../../../../data/products.data';
 import { TruncatePipe } from '../../../../pipes/truncate.pipe';
+import { Products } from '../../../../models/product';
 
 @Component({
   selector: 'app-product-card',
@@ -10,8 +10,8 @@ import { TruncatePipe } from '../../../../pipes/truncate.pipe';
   styleUrl: './product-card.component.css',
 })
 export class ProductCardComponent {
-  @Input() product!: Product;
-  @Output() add = new EventEmitter<Product>();
+  @Input() product!: Products;
+  @Output() add = new EventEmitter<Products>();
 
   onAdd() {
     this.add.next(this.product);
