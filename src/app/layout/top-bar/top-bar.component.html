@@ -1,8 +1,8 @@
 <div class="wrapper">
   <div class="brand-group" routerLink="/">
     <img src="assets/icons/menu.png" alt="" class="menu link" />
-    <img src="assets/images/logo.png" alt="" class="logo link" />
-    <div class="brand-name link">JT Store</div>
+    <img src="assets/images/logoJt.png" alt="" class="logo link" />
+    <div class="brand-name link">MyStore</div>
   </div>
   <div class="search-group">
     <input type="search" class="search-input" placeholder="Search" />
@@ -15,7 +15,7 @@
     <div class="cart" routerLink="/cart">
       <img src="assets/icons/cart.png" alt="" class="cart-icon link" />
       <span class="cart-count">{{ count() }}</span>
-      <span class="cart-total">${{ total() | number : "1.2-2" }}</span>
+      <span class="cart-total">AO{{ total() | number : "1.2-2" }}</span>
     </div>
   </div>
 </div>

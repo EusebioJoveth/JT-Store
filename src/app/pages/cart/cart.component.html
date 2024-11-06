@@ -1,6 +1,6 @@
 <div class="wrapper">
   <header class="header">
-    <strong>Cart </strong>({{
+    <strong>Carrinho </strong>({{
       count() === 1 ? count() + " item" : count() + " items"
     }})
   </header>
@@ -13,7 +13,7 @@
         }}</strong>
       </div>
       <div class="arrival">
-        <strong>Arrives by Wed, Jan 24</strong>
+        <strong>Chega até quarta-feira, 24 de janeiro</strong>
       </div>
       <div class="content">
         @for (item of items(); track item.id) {
@@ -27,7 +27,7 @@
     </div>
     <aside class="total shadow">
       <button class="checkout" (click)="onCheckout()">
-        <strong>Continue to Checkout</strong>
+        <strong>Continuar para finalizar a compra</strong>
       </button>
       <div class="subtotal value-pair">
         <div>
@@ -38,11 +38,11 @@
         <div>${{ total() }}</div>
       </div>
       <div class="taxes value-pair">
-        <div><strong>Taxes</strong></div>
-        <div>Calculated at checkout</div>
+        <div><strong>Impostos</strong></div>
+        <div>Calcular ao finalizar</div>
       </div>
       <div class="estimated-total value-pair">
-        <div><strong>Estimated Total</strong></div>
+        <div><strong>Total Estimado</strong></div>
         <div class="estimated-total-value">
           <strong>${{ total() }}</strong>
         </div>
@@ -50,6 +50,6 @@
     </aside>
   </main>
   } @else {
-  <div class="cart-empty">Cart is Empty!</div>
+  <div class="cart-empty">Carrinho está vazio!</div>
   }
 </div>
