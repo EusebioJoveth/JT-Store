@@ -14,7 +14,7 @@ import { Products } from '../../../../models/product';
 export class ProductsComponent {
   products = PRODUCTS;
 
-  constructor(private cartService: CartService) {}
+  constructor(private readonly cartService: CartService) {}
 
   onAdd(product: Products) {
     this.cartService.addItem({
